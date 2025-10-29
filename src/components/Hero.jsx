@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative w-full min-h-[100dvh] mx-auto flex flex-col justify-center items-center overflow-hidden bg-[#0a0118]" // <-- Dark base background
+      className="relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-[#0a0118]"
     >
       {/* === Particle Background === */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -21,7 +21,7 @@ const Hero = () => {
           particleSpread={8}
           speed={0.2}
           particleBaseSize={80}
-          moveParticlesOnHover={false} // disabled on mobile
+          moveParticlesOnHover={false}
           alphaParticles={true}
           disableRotation={false}
         />
