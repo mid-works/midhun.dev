@@ -9,34 +9,39 @@ const Hero = () => {
 
   return (
     <section
-      className="relative w-full min-h-[100dvh] mx-auto flex flex-col justify-center items-center overflow-hidden bg-primary"
+      className="relative w-full min-h-[100dvh] mx-auto flex flex-col justify-center items-center overflow-hidden bg-[#0a0118]" // <-- Dark base background
     >
-      {/* Particle Background */}
+      {/* === Particle Background === */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Particles
           particleColors={["#ffffff", "#915eff", "#a78bfa"]}
-          particleCount={typeof window !== "undefined" && window.innerWidth < 768 ? 100 : 250}
+          particleCount={
+            typeof window !== "undefined" && window.innerWidth < 768 ? 100 : 250
+          }
           particleSpread={8}
           speed={0.2}
           particleBaseSize={80}
-          moveParticlesOnHover={false}  // Disabled for mobile stability
+          moveParticlesOnHover={false} // disabled on mobile
           alphaParticles={true}
           disableRotation={false}
         />
       </div>
 
-      {/* Foreground Content */}
+      {/* === Foreground Content === */}
       <div
         className={`${styles.paddingX} relative z-10 max-w-7xl w-full flex flex-col items-center text-center gap-5 mt-[120px]`}
       >
+        {/* Greeting */}
         <div className="text-[24px] text-white">
           <Greeting />
         </div>
 
-        <p className={`${styles.heroHeadText} mt-2 text-white-100`}>
+        {/* Name Section */}
+        <p className={`${styles.heroHeadText} mt-2 text-white`}>
           I am <span className="text-[#915eff]">Midhun</span>
         </p>
 
+        {/* Scroll Down Indicator */}
         <p className="text-secondary flex items-center gap-2 justify-center mt-6">
           My Core Competencies
           <span
@@ -48,6 +53,7 @@ const Hero = () => {
           </span>
         </p>
 
+        {/* Skill Rotator */}
         <SkillLoop />
       </div>
     </section>
