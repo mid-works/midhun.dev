@@ -137,7 +137,7 @@ const experience = [
   },
   {
     title: "High School Education",
-    company_name: "MIGROS KIDS Matric Hr Sec School, Chennai",
+    company_name: "MIGROS KIDS Matric Hr Sec School, Tirupur",
     iconBg: "#E6DEDD",
     date: "Jun 2017 - Mar 2019",
     points: [
