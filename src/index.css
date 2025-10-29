@@ -114,6 +114,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

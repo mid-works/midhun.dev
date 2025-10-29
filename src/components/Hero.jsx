@@ -8,21 +8,24 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen mx-auto flex flex-col justify-center items-center overflow-hidden bg-primary">
+    <section
+      className="relative w-full min-h-[100dvh] mx-auto flex flex-col justify-center items-center overflow-hidden bg-primary"
+    >
       {/* Particle Background */}
-      <div className="absolute inset-0 z-20">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <Particles
           particleColors={["#ffffff", "#915eff", "#a78bfa"]}
-          particleCount={250}
+          particleCount={typeof window !== "undefined" && window.innerWidth < 768 ? 100 : 250}
           particleSpread={8}
           speed={0.2}
           particleBaseSize={80}
-          moveParticlesOnHover={true}
+          moveParticlesOnHover={false}  // Disabled for mobile stability
           alphaParticles={true}
           disableRotation={false}
         />
       </div>
 
+      {/* Foreground Content */}
       <div
         className={`${styles.paddingX} relative z-10 max-w-7xl w-full flex flex-col items-center text-center gap-5 mt-[120px]`}
       >
