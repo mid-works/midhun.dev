@@ -4,23 +4,24 @@ import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
   const handleClick = () => {
-    alert("Bro, scroll — don't click 😎");
+    alert("Bro, scroll — don't click \u{1F601}");
   };
 
   return (
     <section
-      className="relative w-full min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden bg-[#0a0118]"
+      id="hero"
+      className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-[#0a0118]"
     >
       {/* === Particle Background === */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Particles
           particleColors={["#ffffff", "#915eff", "#a78bfa"]}
           particleCount={
-            typeof window !== "undefined" && window.innerWidth < 768 ? 100 : 250
+            typeof window !== "undefined" && window.innerWidth < 768 ? 80 : 200
           }
           particleSpread={8}
           speed={0.2}
-          particleBaseSize={80}
+          particleBaseSize={60}
           moveParticlesOnHover={false}
           alphaParticles={true}
           disableRotation={false}
@@ -29,20 +30,20 @@ const Hero = () => {
 
       {/* === Foreground Content === */}
       <div
-        className={`${styles.paddingX} relative z-10 max-w-7xl w-full flex flex-col items-center text-center gap-5 mt-[120px]`}
+        className={`${styles.paddingX} relative z-10 max-w-7xl w-full flex flex-col items-center text-center gap-5`}
       >
         {/* Greeting */}
-        <div className="text-[24px] text-white">
+        <div className="text-[22px] sm:text-[24px] text-white font-medium">
           <Greeting />
         </div>
 
         {/* Name Section */}
-        <p className={`${styles.heroHeadText} mt-2 text-white`}>
+        <h1 className="text-white font-bold text-[40px] sm:text-[50px] leading-tight">
           I am <span className="text-[#915eff]">Midhun</span>
-        </p>
+        </h1>
 
         {/* Scroll Down Indicator */}
-        <p className="text-secondary flex items-center gap-2 justify-center mt-6">
+        <p className="text-secondary flex items-center gap-2 justify-center mt-6 text-[16px] sm:text-[18px]">
           My Core Competencies
           <span
             onClick={handleClick}
