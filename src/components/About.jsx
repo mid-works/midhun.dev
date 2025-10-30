@@ -52,6 +52,7 @@ const About = () => {
           <Knowcard key={knowledge.title} index = {index} {...knowledge}></Knowcard>
         ))}
       </div>
+      
     </>
   )
 }

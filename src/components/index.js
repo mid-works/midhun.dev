@@ -8,6 +8,6 @@ import Works from './Works'
 import Exp from './Exp'
 import Footer from './Footer'
 
-import { EarthCanvas, BallCanvas, StarsCanvas,Particles,SkillLoop , Greeting} from './canvas'
+import { EarthCanvas, BallCanvas, StarsCanvas,ParticlesBackground,SkillLoop , Greeting} from './canvas'
 
-export { About, Contact, Hero, Loader, Navbar, Tech, Works , Exp,EarthCanvas, BallCanvas, StarsCanvas, Footer , SkillLoop , Greeting}
+export { About, Contact, Hero, Loader, Navbar, Tech, Works , Exp,EarthCanvas, BallCanvas, StarsCanvas, Footer , SkillLoop , Greeting , ParticlesBackground}

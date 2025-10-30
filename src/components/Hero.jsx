@@ -1,36 +1,21 @@
 import { styles } from "../Styles";
-import { Particles, SkillLoop, Greeting } from "./canvas";
+import { SkillLoop, Greeting } from "./canvas";
 import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
   const handleClick = () => {
-    alert("Bro, scroll — don't click \u{1F601}");
+    alert("Bro, scroll — don't click 😁");
   };
 
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-[#0a0118]"
+      className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-primary" 
     >
-      {/* === Particle Background === */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Particles
-          particleColors={["#ffffff", "#915eff", "#a78bfa"]}
-          particleCount={
-            typeof window !== "undefined" && window.innerWidth < 768 ? 80 : 200
-          }
-          particleSpread={8}
-          speed={0.2}
-          particleBaseSize={60}
-          moveParticlesOnHover={false}
-          alphaParticles={true}
-          disableRotation={false}
-        />
-      </div>
 
       {/* === Foreground Content === */}
       <div
-        className={`${styles.paddingX} relative z-10 max-w-7xl w-full flex flex-col items-center text-center gap-5`}
+        className={`${styles.paddingX} relative z-10 max-w-7xl w-full flex flex-col items-center text-center gap-5 mt-6`}
       >
         {/* Greeting */}
         <div className="text-[22px] sm:text-[24px] text-white font-medium">
@@ -38,7 +23,7 @@ const Hero = () => {
         </div>
 
         {/* Name Section */}
-        <h1 className="text-white font-bold text-[40px] sm:text-[50px] leading-tight">
+        <h1 className="text-white font-bold text-[40px] sm:text-[50px] leading-tight mt-6">
           I am <span className="text-[#915eff]">Midhun</span>
         </h1>
 
