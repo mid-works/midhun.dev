@@ -104,8 +104,6 @@ const technologies = [
     icon: git,
   },
   
-  
-  
 ];
 const experience = [
   
