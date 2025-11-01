@@ -1,4 +1,4 @@
-import{r as e,j as u}from"./index-DY54_yZY.js";import{_ as p,c as x,C as P,P as j}from"./Preload-N9wPt1oO.js";import{R as M,w as S,ai as d,M as C,V as U,aj as F}from"./index-0332b2ed.esm-jLApo5AU.js";const I=()=>parseInt(M.replace(/\D+/g,"")),v=I(),b=v>=154?"opaque_fragment":"output_fragment";class z extends S{constructor(r){super(r),this.onBeforeCompile=(t,o)=>{const{isWebGL2:s}=o.capabilities;t.fragmentShader=t.fragmentShader.replace(`#include <${b}>`,`
+import{r as e,j as u}from"./index-BFugou05.js";import{_ as p,c as x,C as P,P as j}from"./Preload-D1pdV5X4.js";import{R as M,w as S,ai as d,M as C,V as U,aj as F}from"./index-0332b2ed.esm-jLApo5AU.js";const I=()=>parseInt(M.replace(/\D+/g,"")),v=I(),b=v>=154?"opaque_fragment":"output_fragment";class z extends S{constructor(r){super(r),this.onBeforeCompile=(t,o)=>{const{isWebGL2:s}=o.capabilities;t.fragmentShader=t.fragmentShader.replace(`#include <${b}>`,`
         ${s?`#include <${b}>`:`#extension GL_OES_standard_derivatives : enable
 #include <${b}>`}
       vec2 cxy = 2.0 * gl_PointCoord - 1.0;
