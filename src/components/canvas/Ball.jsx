@@ -1,98 +1,57 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  Preload,
+  useTexture,
+} from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Ball = ({ imgUrl, position }) => {
-  const [decal] = useTexture([imgUrl]);
+const Ball = (props) => {
+  const [decal] = useTexture([props.imgUrl]);
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <mesh castShadow receiveShadow position={position} scale={2.5}>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[0, 0, 0.05]} />
+      <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial color="#fff8eb" flatShading />
-        <meshStandardMaterial polygonOffset polygonOffsetFactor={-5} />
-        <meshStandardMaterial flatShading />
-        <meshStandardMaterial />
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-          <meshStandardMaterial />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
-        <mesh>
-          <meshStandardMaterial color="#fff8eb" />
-        </mesh>
+        <meshStandardMaterial
+          color='#fff8eb'
+          polygonOffset
+          polygonOffsetFactor={-5}
+          flatShading
+        />
+        <Decal
+          position={[0, 0, 1]}
+          rotation={[2 * Math.PI, 0, 6.25]}
+          scale={1}
+          map={decal}
+          flatShading
+        />
       </mesh>
     </Float>
   );
 };
 
-const BallsCanvas = ({ technologies }) => {
+const BallCanvas = ({ icon }) => {
   return (
     <Canvas
-      frameloop="demand"
+      frameloop='demand'
       dpr={[1, 2]}
-      camera={{ position: [0, 0, 15], fov: 50 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} enableRotate={false} />
-        <ambientLight intensity={0.6} />
-        <directionalLight position={[0, 0, 5]} />
-
-        {technologies.map((tech, index) => {
-          // Arrange balls in a grid
-          const x = (index % 5) * 3 - 6; // 5 per row
-          const y = -Math.floor(index / 5) * 3 + 3;
-          return <Ball key={tech.name} imgUrl={tech.icon} position={[x, y, 0]} />;
-        })}
-
-        <Preload all />
+        <OrbitControls enableZoom={false} />
+        <Ball imgUrl={icon} />
       </Suspense>
+
+      <Preload all />
     </Canvas>
   );
 };
 
-export default BallsCanvas;
+export default BallCanvas;
