@@ -3,8 +3,8 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
 
+import css from "./tech/css.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -25,6 +25,8 @@ import edu  from "./company/edu.png"
 import nids from "./nids.png";
 import fashion from "./fashion.png"
 import movie from "./movie.png"
+
+import profile from "./profile.jpg"
 
 export {
   logo,
@@ -56,4 +58,5 @@ export {
 
   edu,
   
+  profile,
 };

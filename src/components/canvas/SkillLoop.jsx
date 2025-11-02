@@ -36,7 +36,7 @@ const SkillLoop = () => {
           animate="animate"
           exit="exit"
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="text-[#915eff] text-xl sm:text-2xl font-mono font-semibold bg-purple-600/20 px-5 py-2 rounded-xl border border-purple-500/50 shadow-lg"
+          className="text-[#915eff] text-xl sm:text-2xl font-mono font-semibold bg-[#250935] px-5 py-2 rounded-xl border border-purple-500/50 shadow-lg"
         >
           ⚡ {currentSkill.text}
         </motion.h1>
