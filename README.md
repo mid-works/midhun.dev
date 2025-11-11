@@ -5,7 +5,7 @@
 **A sleek, interactive, and 3D-enhanced developer portfolio**  
 Showcasing creativity, technical depth, and smooth animations — a dynamic journey into my professional world.
 
-[![Live Demo](https://img.shields.io/badge/%F0%9F%94%B4_LIVE_DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white)]([https://bit.ly/midfolio](https://mid-works.github.io/midhun.dev/))
+[![Live Demo](https://img.shields.io/badge/%F0%9F%94%B4_LIVE_DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://mid-works.github.io/midhun.dev/)
 
 </div>
 
