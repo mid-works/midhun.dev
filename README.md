@@ -1,88 +1,109 @@
-🌌 Midfolio
-✨ A sleek, modern, and responsive portfolio built to showcase your skills, creativity, and professional journey in the AI/ML and Data Science world. Designed with a futuristic aesthetic and smooth animations to leave a lasting impression.
+# 🧠 midfolio
 
-📋 Table of Contents
-🌟 Overview
+A sleek, interactive, and 3D-enhanced developer portfolio built with modern web technologies. **midfolio** showcases creativity, technical depth, and smooth animations — offering visitors a dynamic look into my professional journey.
 
-🧠 Features
+---
 
-🧩 Tech Stack
+<!-- =========================
+     Top-line badges
+     ========================= -->
 
-⚙️ Installation & Setup
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/FramerMotion-EF0078?style=for-the-badge&logo=framer&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
 
-🚀 Deployment
+---
 
-📫 Contact
+## 🚀 Live Demo
 
-📜 License
+**Live Demo:** [bit.ly/midfolio](https://bit.ly/midfolio)
 
-🌟 Overview
-Midfolio is a professional portfolio template tailored for developers and data scientists who want a visually appealing and performant way to present their work.
-It combines the power of React, Three.js, and Framer Motion to deliver smooth 3D visuals, interactive transitions, and an immersive dark-themed experience.
+---
 
-🧠 Features
-🎨 Sleek dark-mode design
+## 🔭 About the repo
 
-💻 Responsive layout for all devices
+* **Project:** midfolio  
+* **Tech Stack:** React, TailwindCSS, Node.js, Three.js, Framer Motion  
+* **Sections:** Hero, About, Journey, Skills (3D ball using Three.js), Projects (cards), Contact, Footer (social links)  
+* **Deployed on:** GitHub Pages  
 
-🌐 Built with modern technologies (React + TailwindCSS)
+---
 
-🧠 Smooth animations powered by Framer Motion
+## 📊 Dynamic GitHub Stats (auto-updating)
 
-🪄 Interactive 3D elements using Three.js
-
-⚡ Fast, lightweight, and easily customizable
-
-🧩 Tech Stack
-
-
-
+**Overall Stats**
 
 
-⚙️ Installation & Setup
-To run Midfolio locally:
+![mid-works GitHub Stats](https://github-readme-stats.vercel.app/api?username=mid-works&show_icons=true&hide_border=true&theme=tokyonight)
 
-🌀 Clone the repository
+Top Languages
 
-bash
-Copy code
-git clone https://github.com/your-username/midfolio.git
-📂 Navigate to the project directory
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mid-works&layout=compact&hide_border=true&theme=tokyonight)
 
-bash
-Copy code
+
+## Project Structure
+
+midfolio/
+├── public/
+│   └── planet/         # 3D models or assets used by Three.js
+├── src/                # React source code
+│   ├── components/     # Hero, About, ProjectsCard, ContactForm, Footer, ThreeScene
+│   └── styles/         # Global or Tailwind CSS files
+├── .gitignore
+├── README.md           # ← this file
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── vite.config.js
+
+## ⚙️ Installation & Setup
+
+
+# Clone the repository
+git clone https://github.com/mid-works/midfolio.git
+
+# Navigate into the directory
 cd midfolio
-📦 Install dependencies
 
-bash
-Copy code
+# Install dependencies
 npm install
-🚀 Start the development server
 
-bash
-Copy code
+# Start the development server
 npm run dev
-Your portfolio should now be live at http://localhost:3000.
 
-🚀 Deployment
-Midfolio can be easily deployed using GitHub Pages, Vercel, or Netlify.
+## 🌍 Deployment (GitHub Pages)
+A quick way to deploy a Vite + React app to GitHub Pages:
 
-To deploy with GitHub Pages:
+#Install gh-pages
 
-Run npm run build
+npm install --save-dev gh-pages
+Add deployment scripts to your package.json:
 
-Push the contents of the dist/ or build/ folder to your gh-pages branch
 
-Enable GitHub Pages in your repository settings
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
 
-📫 Contact
-👤 mid-works
-💼 AI/ML Engineer, Data Scientist
-🌐 bit.ly/midfolio
-📧 Email — [your email here]
-🔗 LinkedIn — [your LinkedIn link here]
+#Deploy your app:
 
-📜 License
-🪪 This project is licensed under the MIT License.
-Feel free to use, modify, and share — just give credit where it’s due. ✨
+npm run deploy
 
+##📜 License
+This project is licensed under the MIT License — see the LICENSE file for details.
+
+ ##Connect With Me
+💼 LinkedIn: bit.ly/midhun
+
+🐙 GitHub: github.com/mid-works
+
+✉️ Email: midhun231123@gmail.com
