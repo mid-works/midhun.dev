@@ -2,7 +2,7 @@
 
 A sleek, interactive, and 3D-enhanced developer portfolio built with modern web technologies. **midfolio** showcases creativity, technical depth, and smooth animations — offering visitors a dynamic look into my professional journey.
 
----
+--- 
 
 ## 🚀 Tech Stack
 
